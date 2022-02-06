@@ -31,10 +31,10 @@
   /* border-bottom:0.1rem solid black; */
   gap: 2rem;
   box-shadow: #17759c;
-  height: 29rem;
+  height: 15rem;
   position: relative;
-  bottom: 1rem;
-  top: 6rem;
+  bottom: 10rem;
+  top: 1rem;
 }
 
 .login-inp {
@@ -67,3 +67,8 @@
   touch-action: manipulation;
   padding-bottom: -1rem;
 }
+
+.Login_Submit:hover {
+    background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
+  }
+  
