@@ -17,12 +17,22 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useParams } from "react-router-dom";
 
+
+toast.configure();
 const GetProductsByCategory = ()=>{
     const [products,setproducts] = useState([])
 
    const {category} = useParams();
 
-   
+   const getProductsByCategory = ()=>{
+       axios.get(`http://localhost:5000/search_2?category=${category}`).then((response)=>{
+        setproducts(response.data.results)
+       }).catch((err)=>{
+        toast.error(err.response.data.message, {
+            position: toast.POSITION.BOTTOM_RIGHT,
+          });
+       })
+   }
 
 
 
