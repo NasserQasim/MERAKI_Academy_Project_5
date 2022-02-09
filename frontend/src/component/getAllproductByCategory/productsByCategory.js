@@ -24,6 +24,8 @@ const GetProductsByCategory = ()=>{
 
    const {category} = useParams();
 
+   const navigate = useNavigate();
+
    const getProductsByCategory = ()=>{
        axios.get(`http://localhost:5000/search_2?category=${category}`).then((response)=>{
         setproducts(response.data.results)
@@ -34,9 +36,32 @@ const GetProductsByCategory = ()=>{
        })
    }
 
+useEffect(() => {
+    getProductsByCategory()
+},[])
+
+
+  const getAllProductsCategories = products && products.map((element)=>{
+      return (
+          <div className="single-product-category">
+
+
+          </div>
+ 
+
+      )
+  })
 
 
 
 
+return (
+       <div className="multi-products-category">
+
+       </div>
+
+)
 
 }
+
+export default GetProductsByCategory
