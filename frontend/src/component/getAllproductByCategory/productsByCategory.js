@@ -15,3 +15,18 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useParams } from "react-router-dom";
+
+const GetProductsByCategory = ()=>{
+    const [products,setproducts] = useState([])
+
+   const {category} = useParams();
+
+   
+
+
+
+
+
+
+}
